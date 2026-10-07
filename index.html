@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Avinash Annadurai — Applied AI Engineer (LLMs, RAG, Document AI)</title>
-<meta name="description" content="Applied AI Engineer in Chennai building production LLM systems: regulatory compliance automation, document AI pipelines and RAG engines."/>
-<meta property="og:title" content="Avinash Annadurai — Applied AI Engineer"/>
+<title>Avinash Annadurai — GenAI Engineer (LLMs, RAG, Document AI)</title>
+<meta name="description" content="GenAI Engineer in Chennai building production LLM systems: regulatory compliance automation, document AI pipelines and RAG engines."/>
+<meta property="og:title" content="Avinash Annadurai — GenAI Engineer"/>
 <meta property="og:description" content="Production LLM systems, RAG engines and document AI. Sole backend engineer on ComplAI."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://avinashh16.github.io/"/>
 <meta property="og:image" content="https://avinashh16.github.io/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="Avinash Annadurai, Applied AI Engineer"/>
+<meta property="og:image:alt" content="Avinash Annadurai, GenAI Engineer"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -154,9 +154,9 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <div class="hero-tag">Applied AI Engineer — Chennai</div>
+    <div class="hero-tag">GenAI Engineer — Chennai</div>
     <h1 class="hero-name">Avinash<span>builds AI that<br>ships to prod.</span></h1>
-    <p class="hero-desc">I build LLM systems that are measured, not just demoed: a compliance platform running 180+ automated checks at 98% accuracy, document-AI pipelines, and RAG engines.</p>
+    <p class="hero-desc">I build LLM systems that are measured, not just demoed: a compliance platform at 98% accuracy on a golden dataset, document-AI pipelines, and RAG engines.</p>
     <div class="hero-btns">
       <a href="#projects" class="hero-cta">View my work</a>
       <a href="mailto:avinashviji16@gmail.com" class="hero-cta-ghost">Get in touch</a>
@@ -176,7 +176,7 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
     </div>
     <div>
       <div class="about-text">
-        <p>I'm Avinash, an Applied AI Engineer at ManageArtworks. I'm the sole backend engineer on ComplAI, a multi-tenant regulatory compliance platform for food and pharma artwork that I took from concept to beta, and I built the document-intelligence pipeline that feeds it.</p>
+        <p>I'm Avinash, a Senior AI Developer at ManageArtworks. I'm the sole backend engineer on ComplAI, an AI compliance product for food, pharma and cosmetics that I took from concept to beta, and I built the document-extraction pipeline that feeds it.</p>
         <p>Most of my work is the unglamorous half of applied AI: structured LLM parsing, registries that make new regulatory rules easy to onboard, parallel execution, and golden datasets that turn "seems accurate" into a number. Before this I spent a year at Capgemini building ML and graph proofs-of-concept. I studied ECE at NIT Tiruchirappalli (2022).</p>
       </div>
       <div class="about-contact">
@@ -196,26 +196,27 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
     <div class="exp-meta">
       <div class="exp-company">ManageArtworks</div>
       <div class="exp-period">May 2024 – Present</div>
-      <div class="exp-role">Applied AI Engineer</div>
+      <div class="exp-role">Senior AI Developer</div>
     </div>
     <div class="exp-content">
-      <div class="exp-project">ComplAI — Regulatory Compliance Platform</div>
+      <div class="exp-project">ComplAI — AI Platform for Regulatory Compliance</div>
       <ul class="exp-bullets">
-        <li>Sole backend engineer on a multi-tenant compliance platform for food and pharma artwork. Took it from concept to beta, working directly with the Admin, Frontend and AI teams.</li>
-        <li>Built a hybrid rule-plus-LLM engine covering 6 regulatory frameworks with 180+ automated checks, cutting manual artwork review effort by 70–90%.</li>
-        <li>Designed a three-phase pipeline (element attachment, LLM-based structured parsing, parallel validation) with class-based Parser and Validator registries, so new regulatory modules can be onboarded at scale.</li>
-        <li>Reached 98% validation accuracy on an internally curated golden dataset, with sub-10-second PDF validation from stateless validators running in parallel across the whole document.</li>
+        <li>Sole backend engineer on an AI compliance product for food, pharma and cosmetics, from concept to beta.</li>
+        <li>Designed a modular Attach → Parse → Validate pipeline with registry-driven parser and validator plugins, letting new regulatory modules ship without changes to the core pipeline.</li>
+        <li>Developed an extensible library of LLM-based and deterministic rule-based checks for content, layout and print quality across FDA, FSSAI and EU regulations, at 98% accuracy on a golden dataset I curated.</li>
+        <li>Created a provider-agnostic LLM client layer (OpenAI, Anthropic) with typed, structured outputs, so validators can switch models without code changes.</li>
+        <li>Parallelized LLM parsing and validation with semaphore-bounded async execution, keeping end-to-end latency close to the slowest single check rather than the sum of all selected checks.</li>
       </ul>
 
-      <div class="exp-project">Artwork Extraction Engine — Document AI Pipeline</div>
+      <div class="exp-project">Document Extraction — Background Processing Pipeline</div>
       <ul class="exp-bullets">
-        <li>Designed a multi-stage pipeline that combines TET, OCR, Azure Document Intelligence layout analysis, YOLO symbol detection and LLM classification. It is the single source of truth for the Compliance, Proofing and Compare engines.</li>
-        <li>Unified the data model across hierarchical document element types, removing duplicate parsing logic and cutting processing effort by 30–40%.</li>
+        <li>Built the orchestrator that processes every incoming artwork (text extraction, YOLO symbol detection, LLM classification), with API and CLI interfaces and modes from full to fast text-only extraction.</li>
+        <li>Cached results in a shared document schema consumed by the Compliance, Proofing and Compare engines, so each artwork is processed once, cutting downstream pipeline time by up to 90%.</li>
       </ul>
 
-      <div class="exp-project">Artwork Version Compare Engine — Text Difference Detection</div>
+      <div class="exp-project">Artwork Compare — Version Comparison Engine</div>
       <ul class="exp-bullets">
-        <li>Reached 95%+ recall on text differences with 80% fewer false positives using two flows: registration and translation correction for same-layout revisions, and LLM-based block classification for different-layout revisions.</li>
+        <li>Upgraded the existing artwork comparison engine with image registration for same-layout versions, improving detection of text, font and case changes to 95%+ recall with 80% fewer false positives.</li>
       </ul>
     </div>
   </div>
@@ -229,7 +230,7 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
     <div class="exp-content">
       <div class="exp-project">ML and graph-based proofs-of-concept</div>
       <ul class="exp-bullets">
-        <li>Built Python proofs-of-concept for enterprise AI applications using machine learning, Neo4j and graph-based data processing.</li>
+        <li>Built Python and machine learning proofs-of-concept on Neo4j graph data for enterprise clients.</li>
       </ul>
     </div>
   </div>
@@ -252,23 +253,23 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
     <div class="project-card">
       <div class="project-num">002</div>
       <div class="project-title">ComplAI — Compliance Platform</div>
-      <div class="project-desc">A three-phase LLM pipeline (attach, parse, validate) running 180+ automated checks across 6 regulatory frameworks for food and pharma artwork. 98% accuracy on a golden dataset and sub-10-second PDF validation.</div>
+      <div class="project-desc">A modular Attach → Parse → Validate pipeline with registry-driven plugins, running LLM-based and rule-based checks across FDA, FSSAI and EU regulations for food, pharma and cosmetics artwork. 98% accuracy on a golden dataset.</div>
       <div class="project-note">Work project at ManageArtworks. Source is proprietary.</div>
-      <div class="project-tags"><span class="project-tag">LLMs</span><span class="project-tag">FastAPI</span><span class="project-tag">Azure AI</span><span class="project-tag">Docker</span></div>
+      <div class="project-tags"><span class="project-tag">LLMs</span><span class="project-tag">FastAPI</span><span class="project-tag">AsyncIO</span><span class="project-tag">Docker</span></div>
     </div>
     <div class="project-card">
       <div class="project-num">003</div>
-      <div class="project-title">Artwork Extraction Engine</div>
-      <div class="project-desc">A document-AI pipeline that combines TET, OCR, Azure Document Intelligence, YOLO symbol detection and LLM classification into one JSON schema used by three downstream engines, cutting processing effort by 30–40%.</div>
+      <div class="project-title">Document Extraction Pipeline</div>
+      <div class="project-desc">An orchestrator that processes every incoming artwork (text extraction, YOLO symbol detection, LLM classification) into a shared document schema used by three downstream engines, cutting downstream pipeline time by up to 90%.</div>
       <div class="project-note">Work project at ManageArtworks. Source is proprietary.</div>
       <div class="project-tags"><span class="project-tag">YOLO</span><span class="project-tag">OCR</span><span class="project-tag">Azure DI</span><span class="project-tag">Python</span></div>
     </div>
     <div class="project-card">
       <div class="project-num">004</div>
-      <div class="project-title">Version Compare Engine</div>
-      <div class="project-desc">Detects text differences between artwork revisions with 95%+ recall and 80% fewer false positives. Same-layout revisions use registration-based alignment; different-layout revisions use LLM block classification.</div>
+      <div class="project-title">Artwork Compare Engine</div>
+      <div class="project-desc">Upgraded version comparison using image registration for same-layout versions, improving detection of text, font and case changes to 95%+ recall with 80% fewer false positives.</div>
       <div class="project-note">Work project at ManageArtworks. Source is proprietary.</div>
-      <div class="project-tags"><span class="project-tag">LLMs</span><span class="project-tag">Claude</span><span class="project-tag">GPT-4o</span><span class="project-tag">FastAPI</span></div>
+      <div class="project-tags"><span class="project-tag">Image Registration</span><span class="project-tag">Python</span></div>
     </div>
   </div>
 </section>
@@ -280,25 +281,25 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
     <div>
       <div class="skill-group-title">AI / ML</div>
       <ul class="skill-list">
-        <li>LLMs (GPT-4o, Claude)</li><li>RAG Systems</li><li>FAISS / Embeddings</li><li>Semantic Search</li><li>Information Extraction</li><li>Prompt Engineering</li><li>YOLO</li><li>Neo4j</li>
+        <li>Prompt Engineering</li><li>Structured Outputs (Pydantic)</li><li>RAG</li><li>Embeddings</li><li>LLM Evaluation</li><li>FAISS</li><li>SentenceTransformers</li>
       </ul>
     </div>
     <div>
       <div class="skill-group-title">Engineering</div>
       <ul class="skill-list">
-        <li>Python</li><li>C++</li><li>SQL</li><li>FastAPI</li><li>REST APIs</li><li>AsyncIO</li><li>Microservices</li><li>LLM Orchestration</li>
+        <li>Python</li><li>SQL</li><li>FastAPI</li><li>AsyncIO</li><li>REST APIs</li>
       </ul>
     </div>
     <div>
-      <div class="skill-group-title">Systems</div>
+      <div class="skill-group-title">Document AI</div>
       <ul class="skill-list">
-        <li>System Design</li><li>Document AI</li><li>Docker</li><li>CI/CD</li><li>Git</li><li>Evaluation & Testing</li>
+        <li>Azure Document Intelligence</li><li>Information Extraction</li><li>YOLO</li>
       </ul>
     </div>
     <div>
-      <div class="skill-group-title">Cloud</div>
+      <div class="skill-group-title">Platforms &amp; Tools</div>
       <ul class="skill-list">
-        <li>Azure OpenAI</li><li>Azure AI Services</li><li>Azure Document Intelligence</li><li>GCP</li>
+        <li>OpenAI API</li><li>Anthropic API</li><li>Azure OpenAI</li><li>Docker</li><li>Git</li><li>CI/CD</li>
       </ul>
     </div>
   </div>
@@ -328,7 +329,7 @@ a:focus-visible{outline:2px solid var(--black);outline-offset:3px;}
 
 <footer>
   <span>© 2026 Avinash Annadurai</span>
-  <span>Applied AI Engineer · NIT Trichy</span>
+  <span>GenAI Engineer · NIT Trichy</span>
 </footer>
 
 </body>
